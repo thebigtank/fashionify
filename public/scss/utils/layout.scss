@@ -11,10 +11,10 @@ html {
 
 body {
 	overflow-x: hidden;
-	line-height: var(--base-line-height);
-	background-color: var(--body-bg-color);
-	color: var(--body-color);
-	font-family: var(--base-font-family);
+	line-height: 1.2;
+	background-color: var(--body-background);
+	color: var(--body-foreground);
+	font-family: var(--mada);
 }
 
 a {

@@ -1,0 +1,23 @@
+.block.showcase {
+    padding: rem(80px) 0;
+
+    .intro {
+        text-align: center;
+    }
+
+    .small-title {
+        font-family: var(--montserrat);
+        font-size: fluid(14, 18);
+        font-weight: 500;
+        color: var(--color-5);
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: rem(14);
+        letter-spacing: rem(2);
+    }
+
+    .heading {
+        font-family: var(--pp-pangaia);
+        font-size: fluid(35, 55);
+    }
+}
