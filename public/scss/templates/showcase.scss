@@ -17,32 +17,33 @@
     .intro {
         text-align: center;
         position: relative;
+
+        .small-title {
+            font-family: var(--montserrat);
+            font-size: fluid(14, 16);
+            font-weight: 500;
+            color: var(--color-5);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: fluid(8, 14);
+            letter-spacing: rem(2);
+        }
+
+        .heading {
+            font-family: var(--pp-pangaia);
+            font-size: fluid(35, 70);
+        }
+
+        .large-fade {
+            font-size: fluid(70, 170);
+            color: var(--color-6);
+            position: absolute;
+            top: fluid(14, 8);
+            z-index: -1;
+            text-wrap: nowrap;
+            transform: translateX(-50%);
+            left: 50%;
+        }
     }
 
-    .small-title {
-        font-family: var(--montserrat);
-        font-size: fluid(14, 16);
-        font-weight: 500;
-        color: var(--color-5);
-        text-transform: uppercase;
-        display: block;
-        margin-bottom: rem(14);
-        letter-spacing: rem(2);
-    }
-
-    .heading {
-        font-family: var(--pp-pangaia);
-        font-size: fluid(35, 55);
-    }
-
-    .large-fade {
-        font-size: fluid(70, 120);
-        color: var(--color-6);
-        position: absolute;
-        top: fluid(15, 22);
-        z-index: -1;
-        text-wrap: nowrap;
-        transform: translateX(-50%);
-        left: 50%;
-    }
 }
