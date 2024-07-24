@@ -1,10 +1,7 @@
-@use 'include-media'as *;
-
 .block.showcase {
     padding: rem(80px) 0;
     position: relative;
     margin-top: rem(80);
-    overflow: clip;
 
     &::before {
         content: '';
@@ -21,6 +18,7 @@
         text-align: center;
         position: relative;
         margin-bottom: fluid(25, 70);
+        overflow: clip;
 
         .small-title {
             font-family: var(--montserrat);
@@ -60,6 +58,10 @@
             flex-direction: column;
         }
 
+        @include media('<=phone-medium') {
+            align-items: center;
+        }
+
         .card {
             position: relative;
             display: flex;
@@ -75,6 +77,7 @@
 
             @include media('<=phone-medium') {
                 flex-direction: column;
+                max-width: rem(340);
             }
 
             &:hover {
@@ -90,6 +93,10 @@
 
                 p {
                     opacity: 0.5;
+                }
+
+                @include media('<=phone-medium') {
+                    box-shadow: unset;
                 }
             }
         }
