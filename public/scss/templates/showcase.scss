@@ -4,6 +4,7 @@
     padding: rem(80px) 0;
     position: relative;
     margin-top: rem(80);
+    overflow: clip;
 
     &::before {
         content: '';
