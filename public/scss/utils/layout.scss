@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	overflow-x: hidden;
+	overflow: clip;
 	line-height: 1.2;
 	background-color: var(--body-background);
 	color: var(--body-foreground);
