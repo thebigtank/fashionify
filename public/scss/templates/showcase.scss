@@ -3,7 +3,7 @@
 .block.showcase {
     padding: rem(80px) 0;
     position: relative;
-    margin-top: 100px;
+    margin-top: rem(80);
 
     &::before {
         content: '';
@@ -19,7 +19,7 @@
     .intro {
         text-align: center;
         position: relative;
-        margin-bottom: rem(70);
+        margin-bottom: fluid(25, 70);
 
         .small-title {
             font-family: var(--montserrat);
@@ -60,6 +60,7 @@
         }
 
         .card {
+            position: relative;
             display: flex;
             background-color: var(--color-1);
             border: 1px solid var(--color-6);
@@ -69,6 +70,10 @@
 
             @include media('<=tablet') {
                 width: 100%;
+            }
+
+            @include media('<=phone-medium') {
+                flex-direction: column;
             }
 
             &:hover {
@@ -95,6 +100,15 @@
             @include media('<=tablet') {
                 @include ratio(240, 320);
             }
+
+            @include media('<=phone-medium') {
+                max-width: unset;
+                max-height: rem(580);
+            }
+
+            .image {
+                object-position: top;
+            }
         }
 
         .card-content {
@@ -104,9 +118,14 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: rem(20);
 
             @include media('<=tablet') {
                 padding: fluid(20, 60);
+            }
+
+            @include media('<=phone-medium') {
+                position: initial;
             }
 
             &::before {
@@ -118,6 +137,10 @@
                 height: 5px;
                 background-color: var(--color-4);
                 transition: all 350ms ease-in-out;
+
+                @include media('<=phone-medium') {
+                    display: none;
+                }
             }
 
             .brand {
@@ -156,6 +179,12 @@
                     height: fluid(45, 60);
                 }
 
+                @include media('<=phone-medium') {
+                    position: absolute;
+                    top: rem(20);
+                    right: rem(20);
+                }
+
                 svg {
                     width: fluid(32, 44, 'tablet', 'desktop-small');
                     height: fluid(32, 44, 'tablet', 'desktop-small');
@@ -171,6 +200,12 @@
                     background-color: var(--color-3);
                     color: var(--color-1);
                     transform: rotate(0);
+
+                    @include media('<=phone-medium') {
+                        background-color: var(--color-3);
+                        color: var(--color-2);
+                        border-color: var(--color-3);
+                    }
                 }
             }
 
