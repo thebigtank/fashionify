@@ -1,3 +1,5 @@
+@use 'include-media'as *;
+
 .block.showcase {
     padding: rem(80px) 0;
     position: relative;
@@ -51,7 +53,11 @@
     .cards {
         display: flex;
         justify-content: center;
-        gap: rem(40);
+        gap: fluid(20, 40);
+
+        @include media('<=tablet') {
+            flex-direction: column;
+        }
 
         .card {
             display: flex;
@@ -61,12 +67,16 @@
             cursor: pointer;
             transition: all 350ms ease-in-out;
 
+            @include media('<=tablet') {
+                width: 100%;
+            }
+
             &:hover {
-                border-color: transparent;
                 box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1),
                     0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 
                 .card-content {
+
                     &::before {
                         width: 100%;
                     }
@@ -81,6 +91,10 @@
         .image-wrapper {
             flex: 1;
             @include ratio(280, 400);
+
+            @include media('<=tablet') {
+                @include ratio(240, 320);
+            }
         }
 
         .card-content {
@@ -90,6 +104,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @include media('<=tablet') {
+                padding: fluid(20, 60);
+            }
 
             &::before {
                 content: '';
@@ -106,6 +124,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                gap: rem(20);
             }
 
             .brandname {
@@ -113,6 +132,10 @@
                 font-size: fluid(25, 38, 'tablet', 'desktop-small');
                 text-transform: uppercase;
                 flex: 1;
+
+                @include media('<=tablet') {
+                    font-size: fluid(25, 38, 'phone-xsmall', 'tablet');
+                }
             }
 
             .link {
@@ -125,13 +148,23 @@
                 align-items: center;
                 justify-content: center;
                 font-size: fluid(22, 42, 'tablet', 'desktop-small');
-                transform: rotate(-20deg);
+                transform: rotate(-30deg);
                 transition: all 300ms ease-in-out;
 
+                @include media('<=tablet') {
+                    width: fluid(45, 60);
+                    height: fluid(45, 60);
+                }
+
                 svg {
-                    width: 1em;
-                    height: 1em;
+                    width: fluid(32, 44, 'tablet', 'desktop-small');
+                    height: fluid(32, 44, 'tablet', 'desktop-small');
                     stroke-width: 1px;
+
+                    @include media('<=tablet') {
+                        width: fluid(32, 44);
+                        height: fluid(32, 44);
+                    }
                 }
 
                 &:hover {
