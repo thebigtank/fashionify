@@ -1,4 +1,4 @@
-# Fashoiony
+# Fashionify
 
 The webpage demonstrates the use of various web development technologies and follows a specific design to create a fashion landing page.
 
@@ -47,6 +47,7 @@ yarn dev
 - **Resources**:
   - **Images**: Collected from [OVS Fashion](https://www.ovsfashion.com/)
   - **Fonts**: Sourced from [CDN Fonts](https://www.cdnfonts.com/)
+  - **Icons**: Sourced from [Lucide](https://lucide.dev/icons/)
   - **Design**: Based on a Dribbble design available [here](https://dribbble.com/shots/20537821-Fashion-Landing-Page)
 
 ## License
@@ -57,4 +58,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - [OVS Fashion](https://www.ovsfashion.com/) for the images.
 - [CDN Fonts](https://www.cdnfonts.com/) for the fonts.
+- [Lucide](https://lucide.dev/icons/) for the icons.
 - [Dribbble](https://dribbble.com/) for the design inspiration.

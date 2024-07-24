@@ -17,6 +17,7 @@
     .intro {
         text-align: center;
         position: relative;
+        margin-bottom: rem(70);
 
         .small-title {
             font-family: var(--montserrat);
@@ -43,7 +44,87 @@
             text-wrap: nowrap;
             transform: translateX(-50%);
             left: 50%;
+            pointer-events: none;
         }
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: rem(40);
+
+        .card {
+            display: flex;
+            background-color: var(--color-1);
+            border: 1px solid var(--color-2);
+            width: rem(750);
+            cursor: pointer;
+
+            &:hover {
+                p {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .image-wrapper {
+            flex: 1;
+            @include ratio(280, 400);
+        }
+
+        .card-content {
+            flex: 1;
+            padding: fluid(20, 35, 'tablet', 'desktop-small');
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .brand {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .brandname {
+                font-family: var(--pp-pangaia);
+                font-size: fluid(25, 38, 'tablet', 'desktop-small');
+                text-transform: uppercase;
+                flex: 1;
+            }
+
+            .link {
+                width: fluid(45, 60, 'tablet', 'desktop-small');
+                height: fluid(45, 60, 'tablet', 'desktop-small');
+                border: 1px solid var(--color-3);
+                border-radius: 100%;
+                color: var(--color-3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: fluid(22, 42, 'tablet', 'desktop-small');
+                transform: rotate(-20deg);
+                transition: all 300ms ease-in-out;
+
+                svg {
+                    width: 1em;
+                    height: 1em;
+                    stroke-width: 1px;
+                }
+
+                &:hover {
+                    background-color: var(--color-3);
+                    color: var(--color-1);
+                    transform: rotate(0);
+                }
+            }
+
+            p {
+                line-height: 1.5;
+                font-size: fluid(14, 16);
+            }
+        }
+
+
     }
 
 }

@@ -1,4 +1,4 @@
-// @use 'sass:map';
+@use 'sass:map';
 
 .wrapper {
     width: 100%;
@@ -13,5 +13,17 @@
 
     &.full {
         max-width: 100%;
+    }
+
+    &.xlarge {
+        max-width: rem(1800);
+    }
+
+    &.large {
+        max-width: rem(1600);
+    }
+
+    &.medium {
+        max-width: rem(1400);
     }
 }

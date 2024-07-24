@@ -31,14 +31,14 @@
 	text-overflow: ellipsis;
 }
 
-@mixin sequential-delay( $length, $delayAmount: 100ms, $child: '', $addedDelay: 0s) {
+@mixin sequential-delay($length, $delayAmount: 100ms, $child: '', $addedDelay: 0s) {
 	@for $x from 1 through $length {
-		&:nth-child( #{ $x } ) #{ $child } {
+		&:nth-child(#{ $x }) #{ $child } {
 			transition-delay: #{ ( $x - 1 ) * $delayAmount + $addedDelay };
 		}
 	}
 
-	&:nth-child( n + #{ $length + 1 } ) {
+	&:nth-child(n + #{ $length + 1 }) {
 		transition-delay: #{ $delayAmount * $length };
 	}
 }
